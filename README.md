@@ -1,4 +1,74 @@
 # Resutaurant Management System (RMS)
+
+
+# RMS Architecture
+
+
+RMS Architecture
+├── Order Management
+│   ├── Order
+│   │   ├── Attributes:
+│   │   │   ├── orderID
+│   │   │   ├── staffID
+│   │   │   ├── staffName
+│   │   │   ├── date
+│   │   │   ├── state
+│   │   │   └── total
+│   │   ├── Methods:
+│   │   │   ├── addItem(MenuItem rNewMenuItem, byte quantity)
+│   │   │   ├── deleteItem(int index)
+│   │   │   └── calculateTotal()
+│   ├── OrderDetail
+│   │   ├── Attributes:
+│   │   │   ├── itemID
+│   │   │   ├── itemName
+│   │   │   ├── price
+│   │   │   ├── quantity
+│   │   │   └── totalPrice
+│   │   ├── Methods:
+│   │   │   └── addQuantity(byte add)
+│   └── MenuItem
+│       ├── Attributes:
+│       │   ├── ID
+│       │   ├── name
+│       │   ├── type
+│       │   ├── price
+│       │   └── state
+│       ├── Methods:
+│       │   ├── getPrice()
+│       │   └── setState(byte newState, double tempPrice)
+├── Staff Management
+│   ├── Staff (abstract)
+│   │   ├── Attributes:
+│   │   │   ├── ID
+│   │   │   ├── lastName
+│   │   │   ├── firstName
+│   │   │   ├── password
+│   │   │   ├── state
+│   │   │   └── wageRate
+│   │   ├── Methods:
+│   │   │   ├── clockIn()
+│   │   │   ├── clockOut()
+│   │   │   └── calculateWorkTime()
+│   ├── Employee
+│   │   ├── Attributes:
+│   │   │   └── MINIMUM_RATE
+│   │   ├── Methods:
+│   │   │   └── calculateWages()
+│   └── Manager
+│       ├── Attributes:
+│       │   └── MINIMUM_RATE
+│       ├── Methods:
+│       │   └── calculateWages()
+└── User Interface (Controller)
+    ├── Controller
+    │   ├── Methods:
+    │   │   └── mainLoop()
+    └── RMS
+        ├── Methods:
+        │   └── main(String[] args)
+```
+
 ## Execute
 
 website :- https://projectworlds.in

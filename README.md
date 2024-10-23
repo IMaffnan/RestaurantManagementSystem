@@ -1,9 +1,7 @@
 # Resutaurant Management System (RMS)
 
 
-# RMS Architecture
-
-
+```
 RMS Architecture
 ├── Order Management
 │   ├── Order
